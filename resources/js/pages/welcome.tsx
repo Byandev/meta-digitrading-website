@@ -2,6 +2,7 @@ import { Head } from '@inertiajs/react';
 
 import HeroSection from '@/components/landing/hero-section';
 import LandingNavigation from '@/components/landing/landing-navigation';
+import ServicesSection from '@/components/landing/services-section';
 
 export default function Welcome() {
     return (
@@ -11,6 +12,7 @@ export default function Welcome() {
                 <LandingNavigation />
                 <main>
                     <HeroSection />
+                    <ServicesSection />
                 </main>
             </div>
         </>
