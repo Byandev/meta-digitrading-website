@@ -1,7 +1,8 @@
-import { ArrowRight, ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef, useState } from 'react';
 import type { KeyboardEvent, PointerEvent } from 'react';
 
+import LandingImage from '@/components/landing/landing-image';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 
@@ -25,28 +26,29 @@ const productSlides: ProductSlide[] = [
         frameStyles: 'object-cover object-[center_70%]',
     },
     {
-        src: '/images/featured-product/pikutin-live.jpg',
-        alt: 'What’s inside the live — PIKUTIN promo',
-        caption: 'What’s Inside the Live?',
+        src: '/images/featured-product/pikutin-signature-scents.jpg',
+        alt: 'PIKUTIN — Find your signature scent, five signature scents on display',
+        caption: 'Find Your Signature Scent',
+        frameStyles: 'object-cover',
     },
     {
-        src: '/images/featured-product/pikutin-wishlist.jpg',
-        alt: 'I-wishlist mo na — PIKUTIN promo',
-        caption: 'I-Wishlist Mo Na',
+        src: '/images/featured-product/pikutin-og.jpg',
+        alt: 'PIKUTIN OG — Effortlessly fresh extrait de parfum, 50 ml',
+        caption: 'Pikutin OG — Effortlessly Fresh',
     },
     {
-        src: '/images/featured-product/pikutin-discovery-deal.jpg',
-        alt: 'Scent discovery deal — PIKUTIN promo',
-        caption: 'Scent Discovery Deal',
+        src: '/images/featured-product/pikutin-harabas.jpg',
+        alt: 'PIKUTIN Harabas — Rugged and masculine extrait de parfum, 50 ml',
+        caption: 'Harabas — Rugged & Masculine',
     },
     {
-        src: '/images/featured-product/pikutin-bakit-og.jpg',
-        alt: 'Bakit OG? — PIKUTIN promo',
-        caption: 'Bakit OG?',
+        src: '/images/featured-product/pikutin-padrino.jpg',
+        alt: 'PIKUTIN Padrino — Executive presence, pineapple, smoky birch and woody notes',
+        caption: 'Padrino — Executive Presence',
     },
 ];
 
-const scents = ['Sputing', 'Habulin', 'Padrino', 'Pikutin', 'Harabas'];
+const scents = ['Pikutin OG', 'Padrino', 'Harabas', 'Habulin', 'Sputing'];
 
 const swipeThreshold = 40;
 
@@ -58,62 +60,6 @@ const revealStyles =
 
 const arrowButtonStyles =
     'absolute top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white opacity-100 backdrop-blur-md transition hover:scale-105 hover:bg-black/70 lg:opacity-0 lg:group-focus-within:opacity-100 lg:group-hover:opacity-100';
-
-function ProductImage({
-    slide,
-    className,
-    showFileName = false,
-}: {
-    slide: ProductSlide;
-    className?: string;
-    showFileName?: boolean;
-}) {
-    const imageRef = useRef<HTMLImageElement>(null);
-    const [hasFailed, setHasFailed] = useState(false);
-
-    useEffect(() => {
-        const image = imageRef.current;
-
-        if (image?.complete && image.naturalWidth === 0) {
-            setHasFailed(true);
-        }
-    }, []);
-
-    if (hasFailed) {
-        return (
-            <div
-                role="img"
-                aria-label={slide.alt}
-                className={cn(
-                    'flex flex-col items-center justify-center gap-2 bg-[radial-gradient(circle_at_30%_20%,rgb(139_92_246/0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgb(103_232_249/0.3),transparent_55%)] bg-indigo-950 text-white/60',
-                    className,
-                )}
-            >
-                <ImageIcon
-                    aria-hidden="true"
-                    className={showFileName ? 'size-12' : 'size-6'}
-                    strokeWidth={1.25}
-                />
-                {showFileName && (
-                    <span className="px-4 text-center font-mono text-xs break-all">
-                        {slide.src.split('/').pop()}
-                    </span>
-                )}
-            </div>
-        );
-    }
-
-    return (
-        <img
-            ref={imageRef}
-            src={slide.src}
-            alt={slide.alt}
-            draggable={false}
-            onError={() => setHasFailed(true)}
-            className={cn('object-cover', className)}
-        />
-    );
-}
 
 export default function FeaturedProductSection() {
     const { ref, isInView } = useInView<HTMLDivElement>();
@@ -223,15 +169,17 @@ export default function FeaturedProductSection() {
                                         aria-hidden="true"
                                         className="absolute inset-0"
                                     >
-                                        <ProductImage
+                                        <LandingImage
                                             key={`backdrop-${activeSlide.src}`}
-                                            slide={activeSlide}
+                                            src={activeSlide.src}
+                                            alt={activeSlide.alt}
                                             className="size-full scale-110 opacity-50 blur-2xl"
                                         />
                                     </div>
-                                    <ProductImage
+                                    <LandingImage
                                         key={activeSlide.src}
-                                        slide={activeSlide}
+                                        src={activeSlide.src}
+                                        alt={activeSlide.alt}
                                         showFileName
                                         className={cn(
                                             'relative size-full object-contain animate-in duration-500 fade-in zoom-in-95 motion-reduce:animate-none',
@@ -322,8 +270,9 @@ export default function FeaturedProductSection() {
                                             focusRingStyles,
                                         )}
                                     >
-                                        <ProductImage
-                                            slide={slide}
+                                        <LandingImage
+                                            src={slide.src}
+                                            alt={slide.alt}
                                             className="size-full"
                                         />
                                     </button>

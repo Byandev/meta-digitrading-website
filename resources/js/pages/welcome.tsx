@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react';
 
+import CoreValuesSection from '@/components/landing/core-values-section';
 import FeaturedProductSection from '@/components/landing/featured-product-section';
 import HeroSection from '@/components/landing/hero-section';
 import LandingNavigation from '@/components/landing/landing-navigation';
@@ -15,6 +16,7 @@ export default function Welcome() {
                     <HeroSection />
                     <ServicesSection />
                     <FeaturedProductSection />
+                    <CoreValuesSection />
                 </main>
             </div>
         </>
