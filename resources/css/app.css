@@ -140,4 +140,14 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    html:has(#home) {
+        scroll-padding-top: 5rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html:has(#home) {
+            scroll-behavior: smooth;
+        }
+    }
 }
