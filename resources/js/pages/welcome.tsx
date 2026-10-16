@@ -6,6 +6,7 @@ import FeaturedProductSection from '@/components/landing/featured-product-sectio
 import HeroSection from '@/components/landing/hero-section';
 import LandingFooter from '@/components/landing/landing-footer';
 import LandingNavigation from '@/components/landing/landing-navigation';
+import ScrollToTopButton from '@/components/landing/scroll-to-top-button';
 import ServicesSection from '@/components/landing/services-section';
 import VideoShowcaseSection from '@/components/landing/video-showcase-section';
 
@@ -24,6 +25,7 @@ export default function Welcome() {
                     <CtaSection />
                 </main>
                 <LandingFooter />
+                <ScrollToTopButton />
             </div>
         </>
     );
