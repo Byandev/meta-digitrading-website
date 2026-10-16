@@ -151,3 +151,38 @@
         }
     }
 }
+
+@keyframes scroll-zoom-in {
+    from {
+        transform: scale(0.88);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@layer utilities {
+    @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+            .scroll-zoom-in {
+                animation: scroll-zoom-in linear both;
+                animation-timeline: view();
+                animation-range: entry 0% cover 45%;
+            }
+        }
+    }
+}
