@@ -3,25 +3,25 @@ import { ArrowUp } from 'lucide-react';
 
 import AppLogoIcon from '@/components/app-logo-icon';
 import { cn } from '@/lib/utils';
-import { home } from '@/routes';
+import { about, home } from '@/routes';
 
 const footerLinkGroups = [
     {
         title: 'Company',
         links: [
-            { title: 'Home', href: '#home' },
-            { title: 'About Us', href: '#about' },
-            { title: 'Careers', href: '#careers' },
-            { title: 'FAQs', href: '#faqs' },
-            { title: 'Contact Us', href: '#contact' },
+            { title: 'Home', href: home().url },
+            { title: 'About Us', href: about().url },
+            { title: 'Careers', href: `${home().url}#careers` },
+            { title: 'FAQs', href: `${home().url}#faqs` },
+            { title: 'Contact Us', href: `${home().url}#contact` },
         ],
     },
     {
         title: 'Services',
         links: [
-            { title: 'Meta Digitrading', href: '#services' },
-            { title: 'Meta Advertising', href: '#services' },
-            { title: 'Meta Brands', href: '#services' },
+            { title: 'Meta Digitrading', href: `${home().url}#services` },
+            { title: 'Meta Advertising', href: `${home().url}#services` },
+            { title: 'Meta Brands', href: `${home().url}#services` },
         ],
     },
 ];
@@ -96,7 +96,7 @@ export default function LandingFooter() {
                         rights reserved.
                     </p>
                     <a
-                        href="#home"
+                        href="#top"
                         className={cn(
                             'group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-white/80 uppercase transition hover:border-white/35 hover:text-white',
                             focusRingStyles,

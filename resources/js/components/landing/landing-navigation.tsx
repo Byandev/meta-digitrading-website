@@ -11,15 +11,15 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { home } from '@/routes';
+import { about, home } from '@/routes';
 
 const navigationItems = [
-    { title: 'Home', href: '#home' },
-    { title: 'About Us', href: '#about' },
-    { title: 'Services', href: '#services' },
-    { title: 'Careers', href: '#careers' },
-    { title: 'FAQs', href: '#faqs' },
-    { title: 'Contact Us', href: '#contact' },
+    { title: 'Home', href: home().url },
+    { title: 'About Us', href: about().url },
+    { title: 'Services', href: `${home().url}#services` },
+    { title: 'Careers', href: `${home().url}#careers` },
+    { title: 'FAQs', href: `${home().url}#faqs` },
+    { title: 'Contact Us', href: `${home().url}#contact` },
 ];
 
 const focusRingStyles =
@@ -89,7 +89,7 @@ export default function LandingNavigation() {
                 </ul>
 
                 <a
-                    href="#contact"
+                    href={`${home().url}#contact`}
                     className={cn(
                         'hidden items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold tracking-wide text-[#1a0b3d] uppercase transition hover:bg-cyan-200 lg:inline-flex',
                         focusRingStyles,
@@ -136,7 +136,7 @@ export default function LandingNavigation() {
                         </ul>
                         <SheetClose asChild>
                             <a
-                                href="#contact"
+                                href={`${home().url}#contact`}
                                 className={cn(
                                     'mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold tracking-wide text-[#1a0b3d] uppercase',
                                     focusRingStyles,

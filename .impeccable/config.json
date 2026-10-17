@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/about-company-section.tsx"
+        ],
+        "createdAt": "2026-10-16T09:12:11.509Z",
+        "reason": "Claude triage: violet-to-cyan gradient is the site's existing brand palette, reused verbatim from hero-section.tsx and core-values-section.tsx for consistency"
+      }
+    ]
+  }
+}
