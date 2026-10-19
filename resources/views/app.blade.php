@@ -37,8 +37,8 @@
         {{-- Link preview for social sharing (Facebook, Messenger, Viber, X) --}}
         <meta name="description" content="Transform your business with intelligent e-commerce solutions, expert consulting, and cutting-edge technology.">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="{{ config('app.name', 'Meta Digitrading') }}">
-        <meta property="og:title" content="{{ config('app.name', 'Meta Digitrading') }} — Making Prosperity a Reality for Everyone">
+        <meta property="og:site_name" content="Meta Digitrading">
+        <meta property="og:title" content="Meta Digitrading — Making Prosperity a Reality for Everyone">
         <meta property="og:description" content="Transform your business with intelligent e-commerce solutions, expert consulting, and cutting-edge technology.">
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:image" content="{{ asset('og-image.png') }}">
@@ -51,7 +51,7 @@
         @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         <x-inertia::head>
-            <title>{{ config('app.name', 'Meta Digitrading') }}</title>
+            <title>Meta Digitrading</title>
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">
