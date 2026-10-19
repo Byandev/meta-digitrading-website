@@ -11,6 +11,33 @@
         ],
         "createdAt": "2026-10-16T09:12:11.509Z",
         "reason": "Claude triage: violet-to-cyan gradient is the site's existing brand palette, reused verbatim from hero-section.tsx and core-values-section.tsx for consistency"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/who-we-are-section.tsx"
+        ],
+        "createdAt": "2026-10-17T10:41:23.096Z",
+        "reason": "Claude: section reproduces the user's supplied mock (violet-to-cyan headings and highlights), which matches the established brand palette in sibling landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/purpose-section.tsx"
+        ],
+        "createdAt": "2026-10-17T10:45:57.681Z",
+        "reason": "Claude: section reproduces the user's supplied mock (violet-to-cyan MTP heading and cyan highlights), matching the brand palette used across sibling landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/founders-section.tsx"
+        ],
+        "createdAt": "2026-10-19T01:29:34.013Z",
+        "reason": "Claude: section reproduces the user's supplied Our Founders mock (violet-to-cyan heading, violet card glow, cyan roles), matching the brand palette across sibling landing sections"
       }
     ]
   }

@@ -65,7 +65,13 @@ const coreValues: CoreValue[] = [
 const revealStyles =
     'transition duration-700 ease-out motion-reduce:transition-none';
 
-export default function CoreValuesSection() {
+type CoreValuesSectionProps = {
+    className?: string;
+};
+
+export default function CoreValuesSection({
+    className,
+}: CoreValuesSectionProps) {
     const { ref, isInView } = useInView<HTMLDivElement>();
 
     const hiddenUntilInView = isInView
@@ -75,7 +81,10 @@ export default function CoreValuesSection() {
     return (
         <section
             id="core-values"
-            className="relative isolate overflow-hidden bg-black py-24 lg:py-32"
+            className={cn(
+                'relative isolate overflow-hidden bg-black py-24 lg:py-32',
+                className,
+            )}
         >
             <div
                 aria-hidden="true"
@@ -86,7 +95,7 @@ export default function CoreValuesSection() {
                 className="absolute -top-32 -right-48 -z-10 size-[28rem] rounded-full bg-cyan-500/20 blur-3xl"
             />
 
-            <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div ref={ref} className="mx-auto w-full max-w-7xl px-6 lg:px-10">
                 <div
                     className={cn(
                         'flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between',

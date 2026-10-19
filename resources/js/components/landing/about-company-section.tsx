@@ -8,7 +8,7 @@ export default function AboutCompanySection() {
     return (
         <section
             id="about"
-            className="relative isolate overflow-hidden bg-black"
+            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black"
         >
             <div
                 aria-hidden="true"
@@ -23,7 +23,7 @@ export default function AboutCompanySection() {
                 className="absolute -right-48 bottom-0 -z-10 size-[32rem] rounded-full bg-cyan-500/20 blur-3xl"
             />
 
-            <div className="mx-auto max-w-7xl px-6 pt-36 pb-24 lg:px-10 lg:pt-44 lg:pb-32">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-36 pb-24 lg:px-10 lg:pt-32 lg:pb-24">
                 <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                     <div>
                         <p
