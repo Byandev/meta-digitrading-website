@@ -38,6 +38,15 @@
         ],
         "createdAt": "2026-10-19T01:29:34.013Z",
         "reason": "Claude: section reproduces the user's supplied Our Founders mock (violet-to-cyan heading, violet card glow, cyan roles), matching the brand palette across sibling landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/culture-section.tsx"
+        ],
+        "createdAt": "2026-10-19T01:36:52.914Z",
+        "reason": "Claude: section reproduces the user's supplied Our Culture mock (violet-to-cyan heading and card frames), matching the brand palette across sibling landing sections"
       }
     ]
   }

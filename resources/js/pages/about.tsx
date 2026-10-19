@@ -2,6 +2,7 @@ import { Head } from '@inertiajs/react';
 
 import AboutCompanySection from '@/components/landing/about-company-section';
 import CoreValuesSection from '@/components/landing/core-values-section';
+import CultureSection from '@/components/landing/culture-section';
 import FoundersSection from '@/components/landing/founders-section';
 import LandingFooter from '@/components/landing/landing-footer';
 import LandingNavigation from '@/components/landing/landing-navigation';
@@ -21,6 +22,7 @@ export default function About() {
                     <PurposeSection />
                     <CoreValuesSection className="flex min-h-dvh items-center" />
                     <FoundersSection />
+                    <CultureSection />
                 </main>
                 <LandingFooter />
                 <ScrollToTopButton />

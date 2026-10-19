@@ -91,7 +91,7 @@ export default function FoundersSection() {
                     </p>
                 </div>
 
-                <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4">
+                <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-0">
                     {founders.map((founder, index) => (
                         <li
                             key={founder.name}
@@ -99,7 +99,7 @@ export default function FoundersSection() {
                                 transitionDelay: `${150 + index * 100}ms`,
                             }}
                             className={cn(
-                                'group relative rounded-3xl p-px lg:min-h-0',
+                                'group relative rounded-3xl p-px lg:row-span-2 lg:grid lg:min-h-0 lg:grid-rows-subgrid',
                                 revealStyles,
                                 hiddenUntilInView,
                             )}
@@ -113,8 +113,8 @@ export default function FoundersSection() {
                                 className="absolute inset-0 rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_24px_60px_-20px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100"
                             />
 
-                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#07040f]">
-                                <div className="relative aspect-4/5 overflow-hidden bg-linear-to-b lg:aspect-auto lg:min-h-0 lg:flex-1 from-violet-500/80 via-indigo-950 via-55% to-[#07040f]">
+                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#07040f] lg:row-span-2 lg:grid lg:grid-rows-subgrid">
+                                <div className="relative aspect-4/5 overflow-hidden bg-linear-to-b lg:aspect-auto lg:min-h-0 from-violet-500/80 via-indigo-950 via-55% to-[#07040f]">
                                     <LandingImage
                                         src={founder.image}
                                         alt={`Portrait of ${founder.name}`}
@@ -135,7 +135,7 @@ export default function FoundersSection() {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-1 flex-col px-6 pt-3 pb-6 lg:flex-none">
+                                <div className="flex-1 px-6 pt-3 pb-6">
                                     <p className="text-sm leading-relaxed text-pretty text-white/70">
                                         {founder.bio}
                                     </p>
