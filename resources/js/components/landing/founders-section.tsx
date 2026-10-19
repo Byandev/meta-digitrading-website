@@ -54,7 +54,7 @@ export default function FoundersSection() {
     return (
         <section
             id="founders"
-            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-24 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-8"
+            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-16 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-8 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -76,7 +76,7 @@ export default function FoundersSection() {
                         hiddenUntilInView,
                     )}
                 >
-                    <h2 className="text-4xl font-bold tracking-tight uppercase sm:text-5xl">
+                    <h2 className="text-3xl font-bold tracking-tight uppercase sm:text-5xl">
                         <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                             Our{' '}
                         </span>
@@ -84,14 +84,14 @@ export default function FoundersSection() {
                             Founders
                         </span>
                     </h2>
-                    <p className="mt-4 text-lg leading-relaxed text-pretty text-white/70 lg:text-base">
+                    <p className="mt-4 text-base leading-relaxed text-pretty text-white/70 lg:text-base sm:text-lg">
                         Meet the visionary leaders behind META Digitrading,
                         bringing decades of combined expertise in digital
                         trading, e-commerce, and business transformation.
                     </p>
                 </div>
 
-                <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-0">
+                <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-0 sm:mt-14">
                     {founders.map((founder, index) => (
                         <li
                             key={founder.name}
@@ -99,22 +99,22 @@ export default function FoundersSection() {
                                 transitionDelay: `${150 + index * 100}ms`,
                             }}
                             className={cn(
-                                'group relative rounded-3xl p-px lg:row-span-2 lg:grid lg:min-h-0 lg:grid-rows-subgrid',
+                                'group relative rounded-2xl p-px lg:row-span-2 lg:grid lg:min-h-0 lg:grid-rows-subgrid sm:rounded-3xl',
                                 revealStyles,
                                 hiddenUntilInView,
                             )}
                         >
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-linear-to-b from-violet-400/70 via-indigo-500/30 to-cyan-300/60"
+                                className="absolute inset-0 rounded-2xl bg-linear-to-b from-violet-400/70 via-indigo-500/30 to-cyan-300/60 sm:rounded-3xl"
                             />
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_24px_60px_-20px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100"
+                                className="absolute inset-0 rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_24px_60px_-20px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100 sm:rounded-3xl"
                             />
 
-                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#07040f] lg:row-span-2 lg:grid lg:grid-rows-subgrid">
-                                <div className="relative aspect-4/5 overflow-hidden bg-linear-to-b lg:aspect-auto lg:min-h-0 from-violet-500/80 via-indigo-950 via-55% to-[#07040f]">
+                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1rem-1px)] bg-[#07040f] lg:row-span-2 lg:grid lg:grid-rows-subgrid sm:rounded-[calc(1.5rem-1px)]">
+                                <div className="relative aspect-square overflow-hidden bg-linear-to-b sm:aspect-4/5 lg:aspect-auto lg:min-h-0 from-violet-500/80 via-indigo-950 via-55% to-[#07040f]">
                                     <LandingImage
                                         src={founder.image}
                                         alt={`Portrait of ${founder.name}`}
@@ -126,7 +126,7 @@ export default function FoundersSection() {
                                         className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-[#07040f] via-[#07040f]/80 to-transparent"
                                     />
                                     <div className="absolute inset-x-0 bottom-0 px-6 pb-1">
-                                        <h3 className="text-lg font-bold tracking-tight text-white uppercase">
+                                        <h3 className="text-base font-bold tracking-tight text-white uppercase sm:text-lg">
                                             {founder.name}
                                         </h3>
                                         <p className="mt-0.5 text-sm font-medium text-cyan-300">

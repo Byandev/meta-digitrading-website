@@ -66,7 +66,7 @@ export default function LandingNavigation() {
                             hasScrolled ? 'h-9' : 'h-10 lg:h-12',
                         )}
                     />
-                    <span className="hidden text-lg font-semibold tracking-wide text-white uppercase sm:inline lg:text-xl">
+                    <span className="hidden text-base font-semibold tracking-wide text-white uppercase sm:inline lg:text-xl sm:text-lg">
                         Meta Digitrading
                     </span>
                 </Link>
@@ -111,7 +111,7 @@ export default function LandingNavigation() {
                     </SheetTrigger>
                     <SheetContent
                         side="right"
-                        className="w-72 border-white/10 bg-[#0b0618]/95 p-8 text-white backdrop-blur-xl"
+                        className="w-72 border-white/10 bg-[#0b0618]/95 p-6 text-white backdrop-blur-xl sm:p-8"
                     >
                         <SheetTitle className="sr-only">
                             Navigation menu

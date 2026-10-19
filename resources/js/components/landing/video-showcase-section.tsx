@@ -131,7 +131,7 @@ function ShowcaseVideo() {
                             <span className="block text-xs font-semibold tracking-[0.2em] text-cyan-300 uppercase">
                                 Watch the film
                             </span>
-                            <span className="mt-1 hidden text-lg font-semibold text-white sm:block lg:text-2xl">
+                            <span className="mt-1 hidden text-base font-semibold text-white sm:block lg:text-2xl sm:text-lg">
                                 Our First Year Together
                             </span>
                         </span>
@@ -153,7 +153,7 @@ function ShowcaseVideo() {
 
 function AnniversarySeal({ className }: { className?: string }) {
     return (
-        <div aria-hidden="true" className={cn("size-28 lg:size-36", className)}>
+        <div aria-hidden="true" className={cn('size-28 lg:size-36', className)}>
             <div className="relative size-full rounded-full border border-white/20 bg-[#0d0624]/80 shadow-[0_0_50px_-8px_rgb(139_92_246/0.9)] backdrop-blur-md">
                 <svg
                     viewBox="0 0 120 120"
@@ -176,7 +176,7 @@ function AnniversarySeal({ className }: { className?: string }) {
                     </text>
                 </svg>
                 <span className="absolute inset-[24%] flex flex-col items-center justify-center rounded-full bg-linear-to-br from-violet-500 to-cyan-400 text-white">
-                    <span className="text-3xl leading-none font-black lg:text-4xl">
+                    <span className="text-2xl leading-none font-black lg:text-4xl sm:text-3xl">
                         1
                     </span>
                     <span className="mt-0.5 text-[0.5rem] font-bold tracking-[0.2em] uppercase lg:text-[0.6rem]">
@@ -198,7 +198,7 @@ export default function VideoShowcaseSection() {
     return (
         <section
             id="showcase"
-            className="relative isolate overflow-hidden bg-linear-to-b from-black via-[#140a38] via-50% to-[#3a1f94] py-24 lg:py-32"
+            className="relative isolate overflow-hidden bg-linear-to-b from-black via-[#140a38] via-50% to-[#3a1f94] py-16 lg:py-32 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -247,7 +247,7 @@ export default function VideoShowcaseSection() {
                         />
                         Milestone · Year One
                     </p>
-                    <h2 className="mt-6 text-4xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
+                    <h2 className="mt-6 text-3xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
                         <span className="block bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                             Celebrating
                         </span>
@@ -255,7 +255,7 @@ export default function VideoShowcaseSection() {
                             1 Year of Meta
                         </span>
                     </h2>
-                    <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-white/70 lg:text-xl">
+                    <p className="mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/70 lg:text-xl sm:text-lg">
                         One year of building brands, growing businesses, and
                         making prosperity a reality. Thank you for being part of
                         the journey.
@@ -264,14 +264,14 @@ export default function VideoShowcaseSection() {
 
                 <div
                     className={cn(
-                        'relative mt-12 delay-150 lg:mt-16',
+                        'relative mt-8 delay-150 lg:mt-16 sm:mt-12',
                         revealStyles,
                         hiddenUntilInView,
                     )}
                 >
                     <div className="scroll-zoom-in relative">
-                        <div className="rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_0_100px_-20px_rgb(139_92_246/0.9)]">
-                            <div className="relative aspect-video overflow-hidden rounded-[calc(1.5rem-1px)] bg-black">
+                        <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_0_100px_-20px_rgb(139_92_246/0.9)] sm:rounded-3xl">
+                            <div className="relative aspect-video overflow-hidden rounded-[calc(1rem-1px)] bg-black sm:rounded-[calc(1.5rem-1px)]">
                                 <ShowcaseVideo />
                             </div>
                         </div>

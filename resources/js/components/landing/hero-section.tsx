@@ -31,7 +31,7 @@ export default function HeroSection() {
                 className="absolute top-1/2 -left-72 -z-10 size-[36rem] rounded-full bg-indigo-700/40 blur-3xl"
             />
 
-            <div className="mx-auto w-full max-w-7xl px-6 pt-36 pb-28 lg:px-10 lg:pt-44">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-28 lg:px-10 lg:pt-44 sm:pt-36">
                 <p
                     className={cn(
                         'inline-flex items-center gap-2.5 rounded-full border border-violet-400/40 bg-violet-950/50 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-violet-100 uppercase backdrop-blur-sm sm:text-sm',
@@ -47,7 +47,7 @@ export default function HeroSection() {
 
                 <h1
                     className={cn(
-                        'mt-8 max-w-6xl bg-linear-to-r from-violet-100 via-violet-400 to-cyan-300 bg-clip-text text-5xl leading-[0.95] font-bold tracking-tight text-balance text-transparent uppercase sm:text-6xl lg:text-7xl xl:text-[5.5rem]',
+                        'mt-8 max-w-6xl bg-linear-to-r from-violet-100 via-violet-400 to-cyan-300 bg-clip-text text-4xl leading-[0.95] font-bold tracking-tight text-balance text-transparent uppercase sm:text-6xl lg:text-7xl xl:text-[5.5rem]',
                         entranceStyles,
                         'delay-100',
                     )}
@@ -57,7 +57,7 @@ export default function HeroSection() {
 
                 <p
                     className={cn(
-                        'mt-8 max-w-2xl text-lg leading-relaxed text-pretty text-white/70 lg:text-xl',
+                        'mt-8 max-w-2xl text-base leading-relaxed text-pretty text-white/70 lg:text-xl sm:text-lg',
                         entranceStyles,
                         'delay-200',
                     )}
@@ -70,7 +70,7 @@ export default function HeroSection() {
 
                 <div
                     className={cn(
-                        'mt-10 flex flex-col gap-4 sm:flex-row sm:items-center',
+                        'mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:mt-10',
                         entranceStyles,
                         'delay-300',
                     )}
