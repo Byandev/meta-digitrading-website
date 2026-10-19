@@ -5,11 +5,14 @@ import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 
 /**
- * The anniversary video served from public/videos/. A missing video shows a
- * branded placeholder instead.
+ * The anniversary video, hosted on S3 via VITE_ANNIVERSARY_VIDEO_URL and
+ * falling back to public/videos/ locally. A missing video shows a branded
+ * placeholder instead.
  */
 const showcaseVideo = {
-    src: '/videos/META_1ST_ANNIV.mp4',
+    src:
+        import.meta.env.VITE_ANNIVERSARY_VIDEO_URL ||
+        '/videos/META_1ST_ANNIV.mp4',
     title: 'Meta Digitrading first anniversary video',
 };
 

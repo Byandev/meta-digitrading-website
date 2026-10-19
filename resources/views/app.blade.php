@@ -34,6 +34,18 @@
         <link rel="icon" href="/favicon.png" type="image/png">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+        {{-- Link preview for social sharing (Facebook, Messenger, Viber, X) --}}
+        <meta name="description" content="Transform your business with intelligent e-commerce solutions, expert consulting, and cutting-edge technology.">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="{{ config('app.name', 'Meta Digitrading') }}">
+        <meta property="og:title" content="{{ config('app.name', 'Meta Digitrading') }} — Making Prosperity a Reality for Everyone">
+        <meta property="og:description" content="Transform your business with intelligent e-commerce solutions, expert consulting, and cutting-edge technology.">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:image" content="{{ asset('og-image.png') }}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
+
         @fonts
 
         @viteReactRefresh
