@@ -18,7 +18,7 @@ export default function Services() {
                     <ServicesHeroSection />
                     <WhoWeHelpSection />
                     <ServicesSection />
-                    <CtaSection />
+                    <CtaSection showExploreServices={false} />
                 </main>
                 <LandingFooter />
                 <ScrollToTopButton />

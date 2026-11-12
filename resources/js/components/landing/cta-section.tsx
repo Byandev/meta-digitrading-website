@@ -9,7 +9,13 @@ const focusRingStyles =
 const revealStyles =
     'transition duration-700 ease-out motion-reduce:transition-none';
 
-export default function CtaSection() {
+type CtaSectionProps = {
+    showExploreServices?: boolean;
+};
+
+export default function CtaSection({
+    showExploreServices = true,
+}: CtaSectionProps) {
     const { ref, isInView } = useInView<HTMLDivElement>();
 
     const hiddenUntilInView = isInView
@@ -19,7 +25,7 @@ export default function CtaSection() {
     return (
         <section
             id="get-started"
-            className="relative isolate overflow-hidden bg-linear-to-b from-[#3a1f94] to-black py-16 lg:py-32 sm:py-24"
+            className="relative isolate overflow-hidden bg-linear-to-b from-[#3a1f94] to-black py-16 sm:py-24 lg:py-32"
         >
             <div
                 ref={ref}
@@ -40,13 +46,13 @@ export default function CtaSection() {
                         Transform Your Business?
                     </span>
                 </h2>
-                <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/75 lg:text-xl sm:text-lg">
+                <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/75 sm:text-lg lg:text-xl">
                     Let&apos;s work together to make your digital success a
                     reality. Contact us today to learn how META Digitrading can
                     help you thrive.
                 </p>
 
-                <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:mt-10">
+                <div className="mt-8 flex flex-col justify-center gap-4 sm:mt-10 sm:flex-row">
                     <a
                         href="#contact"
                         className={cn(
@@ -57,15 +63,17 @@ export default function CtaSection() {
                         Get Started
                         <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
                     </a>
-                    <a
-                        href="#services"
-                        className={cn(
-                            'inline-flex h-14 items-center justify-center rounded-full border border-white/25 bg-white/5 px-9 text-base font-semibold tracking-wide text-white uppercase backdrop-blur-sm transition hover:border-white/45 hover:bg-white/10',
-                            focusRingStyles,
-                        )}
-                    >
-                        Explore Services
-                    </a>
+                    {showExploreServices && (
+                        <a
+                            href="#services"
+                            className={cn(
+                                'inline-flex h-14 items-center justify-center rounded-full border border-white/25 bg-white/5 px-9 text-base font-semibold tracking-wide text-white uppercase backdrop-blur-sm transition hover:border-white/45 hover:bg-white/10',
+                                focusRingStyles,
+                            )}
+                        >
+                            Explore Services
+                        </a>
+                    )}
                 </div>
             </div>
         </section>
