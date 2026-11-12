@@ -6,6 +6,7 @@ import LandingNavigation from '@/components/landing/landing-navigation';
 import ScrollToTopButton from '@/components/landing/scroll-to-top-button';
 import ServicesHeroSection from '@/components/landing/services-hero-section';
 import ServicesSection from '@/components/landing/services-section';
+import WhoWeHelpSection from '@/components/landing/who-we-help-section';
 
 export default function Services() {
     return (
@@ -15,6 +16,7 @@ export default function Services() {
                 <LandingNavigation />
                 <main>
                     <ServicesHeroSection />
+                    <WhoWeHelpSection />
                     <ServicesSection />
                     <CtaSection />
                 </main>

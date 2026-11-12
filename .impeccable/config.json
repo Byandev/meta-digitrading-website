@@ -56,6 +56,15 @@
         ],
         "createdAt": "2026-11-12T08:36:01.637Z",
         "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, shown in the user's supplied services mockup screenshot and used by the logo and every existing landing section"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/who-we-help-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:41:11.240Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, matching the user's supplied Who We Help mockup screenshot, the logo and existing landing sections"
       }
     ]
   }

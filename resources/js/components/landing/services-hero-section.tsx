@@ -26,7 +26,7 @@ export default function ServicesHeroSection() {
                 className="absolute bottom-0 -left-48 -z-10 size-[28rem] rounded-full bg-indigo-600/30 blur-3xl"
             />
 
-            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-10 lg:pt-32 lg:pb-24 sm:pt-36 sm:pb-24">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-24 lg:px-10 lg:pt-32 lg:pb-24">
                 <div className="max-w-2xl">
                     <p
                         className={cn(
@@ -67,8 +67,8 @@ export default function ServicesHeroSection() {
                             <span className="font-semibold text-cyan-300">
                                 all-in-one e-commerce solutions provider
                             </span>
-                            , empowering businesses to sell smarter, faster,
-                            and better in the digital age.
+                            , empowering businesses to sell smarter, faster, and
+                            better in the digital age.
                         </p>
                         <p className="border-l-2 border-cyan-300/70 pl-6 text-white/90">
                             We are dedicated to helping entrepreneurs, SMEs, and
