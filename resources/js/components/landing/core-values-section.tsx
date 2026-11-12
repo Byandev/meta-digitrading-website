@@ -82,7 +82,7 @@ export default function CoreValuesSection({
         <section
             id="core-values"
             className={cn(
-                'relative isolate overflow-hidden bg-black py-24 lg:py-32',
+                'relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24',
                 className,
             )}
         >
@@ -108,7 +108,7 @@ export default function CoreValuesSection({
                             <span className="size-2 rounded-full bg-cyan-300" />
                             What Drives Us
                         </p>
-                        <h2 className="mt-6 text-4xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
+                        <h2 className="mt-6 text-3xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
                             <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                                 Our{' '}
                             </span>
@@ -117,13 +117,13 @@ export default function CoreValuesSection({
                             </span>
                         </h2>
                     </div>
-                    <p className="max-w-md text-lg leading-relaxed text-pretty text-white/60 lg:pb-2">
+                    <p className="max-w-md text-base leading-relaxed text-pretty text-white/60 lg:pb-2 sm:text-lg">
                         The principles that guide how we work, lead, and grow
                         together — every day, in every project.
                     </p>
                 </div>
 
-                <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:auto-rows-[26rem] lg:grid-cols-12">
+                <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:auto-rows-[26rem] lg:grid-cols-12 sm:mt-12">
                     {coreValues.map((value, index) => (
                         <li
                             key={value.title}
@@ -131,7 +131,7 @@ export default function CoreValuesSection({
                                 transitionDelay: `${150 + index * 100}ms`,
                             }}
                             className={cn(
-                                'group relative min-h-[26rem] rounded-3xl p-px lg:min-h-0',
+                                'group relative min-h-[26rem] rounded-2xl p-px lg:min-h-0 sm:rounded-3xl',
                                 value.gridSpan,
                                 revealStyles,
                                 hiddenUntilInView,
@@ -139,14 +139,14 @@ export default function CoreValuesSection({
                         >
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-white/10"
+                                className="absolute inset-0 rounded-2xl bg-white/10 sm:rounded-3xl"
                             />
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_0_60px_-12px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100"
+                                className="absolute inset-0 rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_0_60px_-12px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100 sm:rounded-3xl"
                             />
 
-                            <article className="relative h-full overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#07040f]">
+                            <article className="relative h-full overflow-hidden rounded-[calc(1rem-1px)] bg-[#07040f] sm:rounded-[calc(1.5rem-1px)]">
                                 <LandingImage
                                     src={value.image}
                                     alt={value.imageAlt}
@@ -168,15 +168,15 @@ export default function CoreValuesSection({
                                     {String(index + 1).padStart(2, '0')}
                                 </span>
 
-                                <div className="absolute inset-x-0 bottom-0 p-7 lg:p-8">
-                                    <span className="flex size-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_30px_-6px_rgb(167_139_250/0.7)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1">
+                                <div className="absolute inset-x-0 bottom-0 p-5 lg:p-8 sm:p-7">
+                                    <span className="flex size-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 shadow-[0_0_30px_-6px_rgb(167_139_250/0.7)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1 sm:rounded-2xl">
                                         <value.icon
                                             aria-hidden="true"
                                             className="size-6 text-white"
                                             strokeWidth={1.5}
                                         />
                                     </span>
-                                    <h3 className="mt-5 bg-linear-to-r from-violet-200 to-cyan-300 bg-clip-text text-3xl font-bold tracking-tight text-transparent uppercase lg:text-4xl">
+                                    <h3 className="mt-5 bg-linear-to-r from-violet-200 to-cyan-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent uppercase lg:text-4xl sm:text-3xl">
                                         {value.title}
                                     </h3>
                                     <p className="mt-3 max-w-sm text-base leading-relaxed text-pretty text-white/75 lg:text-lg">

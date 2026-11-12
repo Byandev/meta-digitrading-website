@@ -106,7 +106,7 @@ export default function FeaturedProductSection() {
     return (
         <section
             id="featured-product"
-            className="relative isolate overflow-hidden bg-black py-24 lg:py-32"
+            className="relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -129,7 +129,7 @@ export default function FeaturedProductSection() {
                         <span className="size-2 rounded-full bg-cyan-300" />
                         Spotlight
                     </p>
-                    <h2 className="mt-6 text-4xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
+                    <h2 className="mt-6 text-3xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
                         <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                             Featured{' '}
                         </span>
@@ -139,7 +139,7 @@ export default function FeaturedProductSection() {
                     </h2>
                 </div>
 
-                <div className="mt-14 grid items-center gap-12 lg:mt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+                <div className="mt-10 grid items-center gap-8 lg:mt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16 sm:mt-14 sm:gap-12">
                     <div
                         className={cn(
                             'delay-150',
@@ -147,8 +147,8 @@ export default function FeaturedProductSection() {
                             hiddenUntilInView,
                         )}
                     >
-                        <div className="rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_0_60px_-15px_rgb(139_92_246/0.8)]">
-                            <div className="rounded-[calc(1.5rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:p-4">
+                        <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_0_60px_-15px_rgb(139_92_246/0.8)] sm:rounded-3xl">
+                            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:p-4 sm:rounded-[calc(1.5rem-1px)]">
                                 <figure
                                     tabIndex={0}
                                     role="region"
@@ -161,7 +161,7 @@ export default function FeaturedProductSection() {
                                         (swipeStartX.current = null)
                                     }
                                     className={cn(
-                                        'group relative aspect-[16/10] touch-pan-y overflow-hidden rounded-2xl bg-black ring-1 ring-cyan-300/50 select-none',
+                                        'group relative aspect-[16/10] touch-pan-y overflow-hidden rounded-xl bg-black ring-1 ring-cyan-300/50 select-none sm:rounded-2xl',
                                         focusRingStyles,
                                     )}
                                 >
@@ -291,13 +291,13 @@ export default function FeaturedProductSection() {
                         <p className="text-sm font-semibold tracking-[0.2em] text-cyan-300 uppercase">
                             Fragrance Collection
                         </p>
-                        <h3 className="mt-3 text-4xl font-bold tracking-tight text-white uppercase lg:text-5xl">
+                        <h3 className="mt-3 text-3xl font-bold tracking-tight text-white uppercase lg:text-5xl sm:text-4xl">
                             Pikutin{' '}
                             <span className="bg-linear-to-r from-violet-400 to-cyan-300 bg-clip-text text-transparent">
                                 Perfume
                             </span>
                         </h3>
-                        <p className="mt-5 max-w-xl text-lg leading-relaxed text-pretty text-white/65">
+                        <p className="mt-5 max-w-xl text-base leading-relaxed text-pretty text-white/65 sm:text-lg">
                             Experience luxury and elegance with our premium
                             PIKUTIN perfume collection. Crafted with the finest
                             ingredients and designed for those who appreciate
@@ -323,7 +323,7 @@ export default function FeaturedProductSection() {
                         <a
                             href="#contact"
                             className={cn(
-                                'group mt-10 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110 sm:w-auto',
+                                'group mt-8 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110 sm:w-auto sm:mt-10',
                                 focusRingStyles,
                             )}
                         >

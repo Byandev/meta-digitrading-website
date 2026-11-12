@@ -1,5 +1,4 @@
 import { Link } from '@inertiajs/react';
-import { ArrowUp } from 'lucide-react';
 
 import AppLogoIcon from '@/components/app-logo-icon';
 import { cn } from '@/lib/utils';
@@ -42,7 +41,7 @@ export default function LandingFooter() {
             />
 
             <div className="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10 lg:pt-20">
-                <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] sm:gap-12">
                     <div className="max-w-sm">
                         <Link
                             href={home()}
@@ -52,7 +51,7 @@ export default function LandingFooter() {
                             )}
                         >
                             <AppLogoIcon className="h-11" />
-                            <span className="text-lg font-semibold tracking-wide text-white uppercase">
+                            <span className="text-base font-semibold tracking-wide text-white uppercase sm:text-lg">
                                 Meta Digitrading
                             </span>
                         </Link>
@@ -90,21 +89,11 @@ export default function LandingFooter() {
                     ))}
                 </div>
 
-                <div className="mt-16 flex flex-col-reverse items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
+                <div className="mt-10 border-t border-white/10 pt-8 text-center sm:mt-16 sm:text-left">
                     <p className="text-sm text-white/50">
                         &copy; {new Date().getFullYear()} Meta Digitrading. All
                         rights reserved.
                     </p>
-                    <a
-                        href="#top"
-                        className={cn(
-                            'group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-white/80 uppercase transition hover:border-white/35 hover:text-white',
-                            focusRingStyles,
-                        )}
-                    >
-                        Back to top
-                        <ArrowUp className="size-3.5 transition-transform group-hover:-translate-y-0.5" />
-                    </a>
                 </div>
             </div>
         </footer>

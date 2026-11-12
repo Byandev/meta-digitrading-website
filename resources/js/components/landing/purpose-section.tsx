@@ -14,7 +14,7 @@ export default function PurposeSection() {
     return (
         <section
             id="purpose"
-            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-24 lg:py-32"
+            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -37,7 +37,7 @@ export default function PurposeSection() {
                     hiddenUntilInView,
                 )}
             >
-                <h2 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
+                <h2 className="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
                     <span className="bg-linear-to-r from-white via-violet-400 to-cyan-300 bg-clip-text text-transparent">
                         Massive Transformative
                     </span>{' '}
@@ -46,14 +46,14 @@ export default function PurposeSection() {
                     </span>
                 </h2>
 
-                <p className="mx-auto mt-10 max-w-3xl text-2xl leading-snug font-medium text-balance text-white sm:text-3xl">
+                <p className="mx-auto mt-8 max-w-3xl text-xl leading-snug font-medium text-balance text-white sm:text-3xl sm:mt-10">
                     Our <span className="text-cyan-300">vision</span> is to make{' '}
                     <span className="text-cyan-300">
                         prosperity a living reality for everyone
                     </span>
                     .
                 </p>
-                <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-white/65">
+                <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/65 sm:text-lg">
                     To inspire a generation that drives progress through
                     compassion, innovation, and collective growth. We dream of a
                     future where opportunities know no boundaries, where every

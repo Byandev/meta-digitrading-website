@@ -19,7 +19,7 @@ export default function CtaSection() {
     return (
         <section
             id="get-started"
-            className="relative isolate overflow-hidden bg-linear-to-b from-[#3a1f94] to-black py-24 lg:py-32"
+            className="relative isolate overflow-hidden bg-linear-to-b from-[#3a1f94] to-black py-16 lg:py-32 sm:py-24"
         >
             <div
                 ref={ref}
@@ -32,7 +32,7 @@ export default function CtaSection() {
                 <p className="text-xs font-semibold tracking-[0.25em] text-cyan-300 uppercase sm:text-sm">
                     Here&apos;s to the next chapter
                 </p>
-                <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
+                <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
                     <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                         Ready to{' '}
                     </span>
@@ -40,13 +40,13 @@ export default function CtaSection() {
                         Transform Your Business?
                     </span>
                 </h2>
-                <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-white/75 lg:text-xl">
+                <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/75 lg:text-xl sm:text-lg">
                     Let&apos;s work together to make your digital success a
                     reality. Contact us today to learn how META Digitrading can
                     help you thrive.
                 </p>
 
-                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:mt-10">
                     <a
                         href="#contact"
                         className={cn(

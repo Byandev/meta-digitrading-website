@@ -83,7 +83,7 @@ export default function WhoWeAreSection() {
     return (
         <section
             id="who-we-are"
-            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-24 lg:py-32"
+            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -95,10 +95,10 @@ export default function WhoWeAreSection() {
             />
 
             <div ref={ref} className="mx-auto w-full max-w-7xl px-6 lg:px-10">
-                <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+                <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-20 sm:gap-12">
                     <div className={cn(revealStyles, hiddenUntilInView)}>
-                        <div className="rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_24px_60px_-20px_rgb(139_92_246/0.7)]">
-                            <div className="rounded-[calc(1.5rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:p-4">
+                        <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_24px_60px_-20px_rgb(139_92_246/0.7)] sm:rounded-3xl">
+                            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:p-4 sm:rounded-[calc(1.5rem-1px)]">
                                 <figure
                                     tabIndex={0}
                                     role="region"
@@ -111,7 +111,7 @@ export default function WhoWeAreSection() {
                                         (swipeStartX.current = null)
                                     }
                                     className={cn(
-                                        'relative aspect-3/2 touch-pan-y overflow-hidden rounded-2xl bg-black ring-1 ring-cyan-300/50 select-none',
+                                        'relative aspect-3/2 touch-pan-y overflow-hidden rounded-xl bg-black ring-1 ring-cyan-300/50 select-none sm:rounded-2xl',
                                         focusRingStyles,
                                     )}
                                 >
@@ -202,7 +202,7 @@ export default function WhoWeAreSection() {
                             hiddenUntilInView,
                         )}
                     >
-                        <h2 className="text-4xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
+                        <h2 className="text-3xl font-bold tracking-tight text-balance uppercase sm:text-5xl lg:text-6xl">
                             <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                                 Who{' '}
                             </span>
@@ -210,17 +210,16 @@ export default function WhoWeAreSection() {
                                 Are We?
                             </span>
                         </h2>
-                        <p className="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-white/70">
+                        <p className="mt-6 max-w-xl text-base leading-relaxed text-pretty text-white/70 sm:text-lg">
                             We believe in creating a{' '}
                             <strong className="font-semibold text-cyan-300">
                                 purpose-driven
                             </strong>
-                            , people-powered, and progress-focused workplace.
-                            As a start-up in the fast-moving e-commerce
-                            industry, we thrive on agility, trust, and
-                            collective leadership. META Digitrading is a
-                            workplace where there is respect in the
-                            environment.
+                            , people-powered, and progress-focused workplace. As
+                            a start-up in the fast-moving e-commerce industry,
+                            we thrive on agility, trust, and collective
+                            leadership. META Digitrading is a workplace where
+                            there is respect in the environment.
                         </p>
                     </div>
                 </div>

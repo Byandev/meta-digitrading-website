@@ -67,7 +67,7 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="relative isolate overflow-hidden bg-black py-24 lg:py-32"
+            className="relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
         >
             <div
                 aria-hidden="true"
@@ -86,7 +86,7 @@ export default function ServicesSection() {
                         <span className="size-2 rounded-full bg-cyan-300" />
                         What We Do
                     </p>
-                    <h2 className="mt-6 text-4xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
+                    <h2 className="mt-6 text-3xl font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
                         <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
                             Our{' '}
                         </span>
@@ -94,13 +94,13 @@ export default function ServicesSection() {
                             Services
                         </span>
                     </h2>
-                    <p className="mt-5 text-lg leading-relaxed text-pretty text-white/60">
+                    <p className="mt-5 text-base leading-relaxed text-pretty text-white/60 sm:text-lg">
                         Three specialized brands, one goal — helping your
                         business grow from first idea to lasting impact.
                     </p>
                 </div>
 
-                <ul className="mt-14 grid gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8">
+                <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8 sm:mt-14">
                     {services.map((service, index) => (
                         <li
                             key={service.highlight}
@@ -108,23 +108,23 @@ export default function ServicesSection() {
                                 transitionDelay: `${150 + index * 120}ms`,
                             }}
                             className={cn(
-                                'group relative rounded-3xl p-px md:last:col-span-2 lg:last:col-span-1',
+                                'group relative rounded-2xl p-px md:last:col-span-2 lg:last:col-span-1 sm:rounded-3xl',
                                 revealStyles,
                                 hiddenUntilInView,
                             )}
                         >
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-white/10"
+                                className="absolute inset-0 rounded-2xl bg-white/10 sm:rounded-3xl"
                             />
                             <div
                                 aria-hidden="true"
-                                className="absolute inset-0 rounded-3xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 opacity-0 shadow-[0_0_60px_-10px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-focus-within:opacity-100 group-hover:opacity-100"
+                                className="absolute inset-0 rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 opacity-0 shadow-[0_0_60px_-10px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-focus-within:opacity-100 group-hover:opacity-100 sm:rounded-3xl"
                             />
 
                             <article
                                 onMouseMove={trackSpotlight}
-                                className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#07040f]"
+                                className="relative flex h-full flex-col overflow-hidden rounded-[calc(1rem-1px)] bg-[#07040f] sm:rounded-[calc(1.5rem-1px)]"
                             >
                                 <div
                                     aria-hidden="true"
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                                                 aria-hidden="true"
                                                 className="absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] mask-[radial-gradient(ellipse_at_center,black_30%,transparent_75%)] bg-size-[28px_28px]"
                                             />
-                                            <div className="relative flex size-24 items-center justify-center rounded-3xl border border-white/20 bg-white/10 shadow-[0_0_50px_-5px_rgb(167_139_250/0.7)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_0_70px_0_rgb(103_232_249/0.6)]">
+                                            <div className="relative flex size-24 items-center justify-center rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_50px_-5px_rgb(167_139_250/0.7)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_0_70px_0_rgb(103_232_249/0.6)] sm:rounded-3xl">
                                                 <service.icon
                                                     aria-hidden="true"
                                                     className="size-11 text-white"
@@ -168,8 +168,8 @@ export default function ServicesSection() {
                                     />
                                 </div>
 
-                                <div className="relative z-20 flex flex-1 flex-col p-7 lg:p-8">
-                                    <h3 className="text-2xl font-bold tracking-tight uppercase lg:text-[1.7rem]">
+                                <div className="relative z-20 flex flex-1 flex-col p-5 lg:p-8 sm:p-7">
+                                    <h3 className="text-xl font-bold tracking-tight uppercase lg:text-[1.7rem] sm:text-2xl">
                                         <span className="text-violet-100">
                                             {service.title}{' '}
                                         </span>

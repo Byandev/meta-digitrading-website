@@ -23,8 +23,8 @@ export default function AboutCompanySection() {
                 className="absolute -right-48 bottom-0 -z-10 size-[32rem] rounded-full bg-cyan-500/20 blur-3xl"
             />
 
-            <div className="mx-auto w-full max-w-7xl px-6 pt-36 pb-24 lg:px-10 lg:pt-32 lg:pb-24">
-                <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-10 lg:pt-32 lg:pb-24 sm:pt-36 sm:pb-24">
+                <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16 sm:gap-12">
                     <div>
                         <p
                             className={cn(
@@ -37,7 +37,7 @@ export default function AboutCompanySection() {
                         </p>
                         <h1
                             className={cn(
-                                'mt-6 text-5xl font-bold tracking-tight uppercase sm:text-6xl lg:text-7xl',
+                                'mt-6 text-4xl font-bold tracking-tight uppercase sm:text-6xl lg:text-7xl',
                                 entranceStyles,
                                 'delay-100',
                             )}
@@ -52,7 +52,7 @@ export default function AboutCompanySection() {
 
                         <div
                             className={cn(
-                                'mt-8 flex flex-col gap-6 text-lg leading-relaxed text-pretty text-white/70',
+                                'mt-8 flex flex-col gap-6 text-base leading-relaxed text-pretty text-white/70 sm:text-lg',
                                 entranceStyles,
                                 'delay-200',
                             )}
@@ -77,7 +77,7 @@ export default function AboutCompanySection() {
 
                     <div
                         className={cn(
-                            'group relative aspect-3/2 overflow-hidden rounded-3xl border border-white/10 bg-[#07040f]',
+                            'group relative aspect-3/2 overflow-hidden rounded-2xl border border-white/10 bg-[#07040f] sm:rounded-3xl',
                             entranceStyles,
                             'delay-300',
                         )}
