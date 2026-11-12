@@ -14,7 +14,7 @@ export default function PurposeSection() {
     return (
         <section
             id="purpose"
-            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
+            className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black py-16 sm:py-24 lg:py-32"
         >
             <div
                 aria-hidden="true"
@@ -46,7 +46,7 @@ export default function PurposeSection() {
                     </span>
                 </h2>
 
-                <p className="mx-auto mt-8 max-w-3xl text-xl leading-snug font-medium text-balance text-white sm:text-3xl sm:mt-10">
+                <p className="mx-auto mt-8 max-w-3xl text-xl leading-snug font-medium text-balance text-white sm:mt-10 sm:text-3xl">
                     Our <span className="text-cyan-300">vision</span> is to make{' '}
                     <span className="text-cyan-300">
                         prosperity a living reality for everyone

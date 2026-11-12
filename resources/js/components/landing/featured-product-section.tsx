@@ -106,7 +106,7 @@ export default function FeaturedProductSection() {
     return (
         <section
             id="featured-product"
-            className="relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
+            className="relative isolate overflow-hidden bg-black py-16 sm:py-24 lg:py-32"
         >
             <div
                 aria-hidden="true"
@@ -139,7 +139,7 @@ export default function FeaturedProductSection() {
                     </h2>
                 </div>
 
-                <div className="mt-10 grid items-center gap-8 lg:mt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16 sm:mt-14 sm:gap-12">
+                <div className="mt-10 grid items-center gap-8 sm:mt-14 sm:gap-12 lg:mt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
                     <div
                         className={cn(
                             'delay-150',
@@ -148,7 +148,7 @@ export default function FeaturedProductSection() {
                         )}
                     >
                         <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px shadow-[0_0_60px_-15px_rgb(139_92_246/0.8)] sm:rounded-3xl">
-                            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:p-4 sm:rounded-[calc(1.5rem-1px)]">
+                            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-violet-600/60 p-3 sm:rounded-[calc(1.5rem-1px)] sm:p-4">
                                 <figure
                                     tabIndex={0}
                                     role="region"
@@ -182,7 +182,7 @@ export default function FeaturedProductSection() {
                                         alt={activeSlide.alt}
                                         showFileName
                                         className={cn(
-                                            'relative size-full object-contain animate-in duration-500 fade-in zoom-in-95 motion-reduce:animate-none',
+                                            'relative size-full animate-in object-contain duration-500 zoom-in-95 fade-in motion-reduce:animate-none',
                                             activeSlide.frameStyles,
                                         )}
                                     />
@@ -291,7 +291,7 @@ export default function FeaturedProductSection() {
                         <p className="text-sm font-semibold tracking-[0.2em] text-cyan-300 uppercase">
                             Fragrance Collection
                         </p>
-                        <h3 className="mt-3 text-3xl font-bold tracking-tight text-white uppercase lg:text-5xl sm:text-4xl">
+                        <h3 className="mt-3 text-3xl font-bold tracking-tight text-white uppercase sm:text-4xl lg:text-5xl">
                             Pikutin{' '}
                             <span className="bg-linear-to-r from-violet-400 to-cyan-300 bg-clip-text text-transparent">
                                 Perfume
@@ -323,7 +323,7 @@ export default function FeaturedProductSection() {
                         <a
                             href="#contact"
                             className={cn(
-                                'group mt-8 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110 sm:w-auto sm:mt-10',
+                                'group mt-8 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110 sm:mt-10 sm:w-auto',
                                 focusRingStyles,
                             )}
                         >

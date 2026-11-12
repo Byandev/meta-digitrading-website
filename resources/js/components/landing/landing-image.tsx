@@ -37,7 +37,7 @@ export default function LandingImage({
                 role="img"
                 aria-label={alt}
                 className={cn(
-                    'flex flex-col items-center justify-center gap-2 bg-[radial-gradient(circle_at_30%_20%,rgb(139_92_246/0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgb(103_232_249/0.3),transparent_55%)] bg-indigo-950 text-white/60',
+                    'flex flex-col items-center justify-center gap-2 bg-indigo-950 bg-[radial-gradient(circle_at_30%_20%,rgb(139_92_246/0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgb(103_232_249/0.3),transparent_55%)] text-white/60',
                     className,
                 )}
             >

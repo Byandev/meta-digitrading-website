@@ -47,6 +47,51 @@
         ],
         "createdAt": "2026-10-19T01:36:52.914Z",
         "reason": "Claude: section reproduces the user's supplied Our Culture mock (violet-to-cyan heading and card frames), matching the brand palette across sibling landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/page-hero-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:36:01.637Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, shown in the user's supplied services mockup screenshot and used by the logo and every existing landing section"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/who-we-help-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:41:11.240Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, matching the user's supplied Who We Help mockup screenshot, the logo and existing landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/why-work-with-us-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:58:26.595Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, matching the user's supplied Careers mockup screenshot, the logo and existing landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/open-positions-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:58:26.618Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, matching the user's supplied Careers mockup screenshot, the logo and existing landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/careers-cta-section.tsx"
+        ],
+        "createdAt": "2026-11-12T09:02:58.049Z",
+        "reason": "Claude decided: reproduces the user's supplied Careers CTA mockup (violet gradient band and blue-to-violet pill), matching the brand palette across landing sections"
       }
     ]
   }

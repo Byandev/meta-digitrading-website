@@ -58,9 +58,9 @@ export default function ScrollToTopButton() {
 
     return (
         <button
-            type='button'
+            type="button"
             onClick={scrollToTop}
-            aria-label='Back to top'
+            aria-label="Back to top"
             tabIndex={isVisible ? 0 : -1}
             aria-hidden={!isVisible}
             className={cn(
@@ -72,43 +72,43 @@ export default function ScrollToTopButton() {
             )}
         >
             <svg
-                viewBox='0 0 60 60'
-                className='absolute inset-0 size-full -rotate-90'
-                aria-hidden='true'
+                viewBox="0 0 60 60"
+                className="absolute inset-0 size-full -rotate-90"
+                aria-hidden="true"
             >
                 <defs>
                     <linearGradient
-                        id='scroll-progress-gradient'
-                        x1='0'
-                        y1='0'
-                        x2='1'
-                        y2='1'
+                        id="scroll-progress-gradient"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
                     >
-                        <stop offset='0%' stopColor='#a78bfa' />
-                        <stop offset='100%' stopColor='#67e8f9' />
+                        <stop offset="0%" stopColor="#a78bfa" />
+                        <stop offset="100%" stopColor="#67e8f9" />
                     </linearGradient>
                 </defs>
                 <circle
-                    cx='30'
-                    cy='30'
+                    cx="30"
+                    cy="30"
                     r={ringRadius}
-                    fill='none'
-                    strokeWidth='3'
-                    className='stroke-white/10'
+                    fill="none"
+                    strokeWidth="3"
+                    className="stroke-white/10"
                 />
                 <circle
-                    cx='30'
-                    cy='30'
+                    cx="30"
+                    cy="30"
                     r={ringRadius}
-                    fill='none'
-                    strokeWidth='3'
-                    strokeLinecap='round'
-                    stroke='url(#scroll-progress-gradient)'
+                    fill="none"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    stroke="url(#scroll-progress-gradient)"
                     strokeDasharray={ringCircumference}
                     strokeDashoffset={ringCircumference * (1 - scrollProgress)}
                 />
             </svg>
-            <ArrowUp className='relative size-5 transition-transform group-hover:-translate-y-0.5' />
+            <ArrowUp className="relative size-5 transition-transform group-hover:-translate-y-0.5" />
         </button>
     );
 }

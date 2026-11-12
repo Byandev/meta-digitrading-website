@@ -76,9 +76,9 @@ function CulturePhotoCarousel({ program }: { program: CultureProgram }) {
         setActiveIndex((index + program.photos.length) % program.photos.length);
 
     return (
-        <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px lg:flex lg:min-h-0 lg:flex-col sm:rounded-3xl">
-            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-cyan-900/60 p-3 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col sm:rounded-[calc(1.5rem-1px)]">
-                <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-black ring-1 ring-cyan-300/50 lg:aspect-auto lg:min-h-0 lg:flex-[1_1_20rem] sm:rounded-2xl">
+        <div className="rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/50 to-cyan-300 p-px sm:rounded-3xl lg:flex lg:min-h-0 lg:flex-col">
+            <div className="rounded-[calc(1rem-1px)] bg-linear-to-b from-[#07040f] from-55% to-cyan-900/60 p-3 sm:rounded-[calc(1.5rem-1px)] lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
+                <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-black ring-1 ring-cyan-300/50 sm:rounded-2xl lg:aspect-auto lg:min-h-0 lg:flex-[1_1_20rem]">
                     <LandingImage
                         key={program.photos[activeIndex]}
                         src={program.photos[activeIndex]}
@@ -163,7 +163,7 @@ export default function CultureSection() {
     return (
         <section
             id="culture"
-            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-16 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-10 sm:py-24"
+            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-16 sm:py-24 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-10"
         >
             <div
                 aria-hidden="true"
@@ -225,7 +225,7 @@ export default function CultureSection() {
                     <ul
                         ref={trackRef}
                         className={cn(
-                            'mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 lg:mt-10 lg:grid lg:min-h-0 lg:auto-cols-[calc((100%-3rem)/3)] lg:grid-flow-col lg:grid-rows-[minmax(0,1fr)_auto_auto] lg:gap-y-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mt-12',
+                            'mt-8 flex snap-x snap-mandatory [scrollbar-width:none] gap-6 overflow-x-auto pb-4 sm:mt-12 lg:mt-10 lg:grid lg:min-h-0 lg:auto-cols-[calc((100%-3rem)/3)] lg:grid-flow-col lg:grid-rows-[minmax(0,1fr)_auto_auto] lg:gap-y-0 [&::-webkit-scrollbar]:hidden',
                             revealStyles,
                             hiddenUntilInView,
                             'delay-150',
@@ -234,10 +234,10 @@ export default function CultureSection() {
                         {culturePrograms.map((program) => (
                             <li
                                 key={program.title}
-                                className="w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.5rem)/2)] lg:row-span-3 lg:grid lg:w-auto lg:min-h-0 lg:grid-rows-subgrid"
+                                className="w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.5rem)/2)] lg:row-span-3 lg:grid lg:min-h-0 lg:w-auto lg:grid-rows-subgrid"
                             >
                                 <CulturePhotoCarousel program={program} />
-                                <h3 className="mt-6 shrink-0 bg-linear-to-r from-white via-violet-300 to-cyan-300 bg-clip-text text-xl font-bold tracking-tight text-transparent uppercase lg:text-3xl sm:text-2xl">
+                                <h3 className="mt-6 shrink-0 bg-linear-to-r from-white via-violet-300 to-cyan-300 bg-clip-text text-xl font-bold tracking-tight text-transparent uppercase sm:text-2xl lg:text-3xl">
                                     {program.title}
                                 </h3>
                                 <p className="mt-3 shrink-0 text-base leading-relaxed text-pretty text-white/75">

@@ -23,8 +23,8 @@ export default function AboutCompanySection() {
                 className="absolute -right-48 bottom-0 -z-10 size-[32rem] rounded-full bg-cyan-500/20 blur-3xl"
             />
 
-            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-10 lg:pt-32 lg:pb-24 sm:pt-36 sm:pb-24">
-                <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16 sm:gap-12">
+            <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-24 lg:px-10 lg:pt-32 lg:pb-24">
+                <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
                     <div>
                         <p
                             className={cn(

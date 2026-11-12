@@ -67,7 +67,7 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24"
+            className="relative isolate overflow-hidden bg-black py-16 sm:py-24 lg:py-32"
         >
             <div
                 aria-hidden="true"
@@ -100,7 +100,7 @@ export default function ServicesSection() {
                     </p>
                 </div>
 
-                <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8 sm:mt-14">
+                <ul className="mt-10 grid gap-6 sm:mt-14 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8">
                     {services.map((service, index) => (
                         <li
                             key={service.highlight}
@@ -108,7 +108,7 @@ export default function ServicesSection() {
                                 transitionDelay: `${150 + index * 120}ms`,
                             }}
                             className={cn(
-                                'group relative rounded-2xl p-px md:last:col-span-2 lg:last:col-span-1 sm:rounded-3xl',
+                                'group relative rounded-2xl p-px sm:rounded-3xl md:last:col-span-2 lg:last:col-span-1',
                                 revealStyles,
                                 hiddenUntilInView,
                             )}
@@ -168,8 +168,8 @@ export default function ServicesSection() {
                                     />
                                 </div>
 
-                                <div className="relative z-20 flex flex-1 flex-col p-5 lg:p-8 sm:p-7">
-                                    <h3 className="text-xl font-bold tracking-tight uppercase lg:text-[1.7rem] sm:text-2xl">
+                                <div className="relative z-20 flex flex-1 flex-col p-5 sm:p-7 lg:p-8">
+                                    <h3 className="text-xl font-bold tracking-tight uppercase sm:text-2xl lg:text-[1.7rem]">
                                         <span className="text-violet-100">
                                             {service.title}{' '}
                                         </span>

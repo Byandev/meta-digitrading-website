@@ -82,7 +82,7 @@ export default function CoreValuesSection({
         <section
             id="core-values"
             className={cn(
-                'relative isolate overflow-hidden bg-black py-16 lg:py-32 sm:py-24',
+                'relative isolate overflow-hidden bg-black py-16 sm:py-24 lg:py-32',
                 className,
             )}
         >
@@ -117,13 +117,13 @@ export default function CoreValuesSection({
                             </span>
                         </h2>
                     </div>
-                    <p className="max-w-md text-base leading-relaxed text-pretty text-white/60 lg:pb-2 sm:text-lg">
+                    <p className="max-w-md text-base leading-relaxed text-pretty text-white/60 sm:text-lg lg:pb-2">
                         The principles that guide how we work, lead, and grow
                         together — every day, in every project.
                     </p>
                 </div>
 
-                <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:auto-rows-[26rem] lg:grid-cols-12 sm:mt-12">
+                <ul className="mt-8 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:mt-16 lg:auto-rows-[26rem] lg:grid-cols-12">
                     {coreValues.map((value, index) => (
                         <li
                             key={value.title}
@@ -131,7 +131,7 @@ export default function CoreValuesSection({
                                 transitionDelay: `${150 + index * 100}ms`,
                             }}
                             className={cn(
-                                'group relative min-h-[26rem] rounded-2xl p-px lg:min-h-0 sm:rounded-3xl',
+                                'group relative min-h-[26rem] rounded-2xl p-px sm:rounded-3xl lg:min-h-0',
                                 value.gridSpan,
                                 revealStyles,
                                 hiddenUntilInView,
@@ -168,7 +168,7 @@ export default function CoreValuesSection({
                                     {String(index + 1).padStart(2, '0')}
                                 </span>
 
-                                <div className="absolute inset-x-0 bottom-0 p-5 lg:p-8 sm:p-7">
+                                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 lg:p-8">
                                     <span className="flex size-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 shadow-[0_0_30px_-6px_rgb(167_139_250/0.7)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1 sm:rounded-2xl">
                                         <value.icon
                                             aria-hidden="true"
@@ -176,7 +176,7 @@ export default function CoreValuesSection({
                                             strokeWidth={1.5}
                                         />
                                     </span>
-                                    <h3 className="mt-5 bg-linear-to-r from-violet-200 to-cyan-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent uppercase lg:text-4xl sm:text-3xl">
+                                    <h3 className="mt-5 bg-linear-to-r from-violet-200 to-cyan-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent uppercase sm:text-3xl lg:text-4xl">
                                         {value.title}
                                     </h3>
                                     <p className="mt-3 max-w-sm text-base leading-relaxed text-pretty text-white/75 lg:text-lg">

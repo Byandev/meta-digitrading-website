@@ -71,7 +71,7 @@ function ShowcaseVideo() {
             <div
                 role="img"
                 aria-label={showcaseVideo.title}
-                className="flex size-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_30%_20%,rgb(139_92_246/0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgb(103_232_249/0.3),transparent_55%)] bg-indigo-950 text-white/60"
+                className="flex size-full flex-col items-center justify-center gap-3 bg-indigo-950 bg-[radial-gradient(circle_at_30%_20%,rgb(139_92_246/0.45),transparent_60%),radial-gradient(circle_at_80%_90%,rgb(103_232_249/0.3),transparent_55%)] text-white/60"
             >
                 <Film
                     aria-hidden="true"
@@ -134,7 +134,7 @@ function ShowcaseVideo() {
                             <span className="block text-xs font-semibold tracking-[0.2em] text-cyan-300 uppercase">
                                 Watch the film
                             </span>
-                            <span className="mt-1 hidden text-base font-semibold text-white sm:block lg:text-2xl sm:text-lg">
+                            <span className="mt-1 hidden text-base font-semibold text-white sm:block sm:text-lg lg:text-2xl">
                                 Our First Year Together
                             </span>
                         </span>
@@ -179,7 +179,7 @@ function AnniversarySeal({ className }: { className?: string }) {
                     </text>
                 </svg>
                 <span className="absolute inset-[24%] flex flex-col items-center justify-center rounded-full bg-linear-to-br from-violet-500 to-cyan-400 text-white">
-                    <span className="text-2xl leading-none font-black lg:text-4xl sm:text-3xl">
+                    <span className="text-2xl leading-none font-black sm:text-3xl lg:text-4xl">
                         1
                     </span>
                     <span className="mt-0.5 text-[0.5rem] font-bold tracking-[0.2em] uppercase lg:text-[0.6rem]">
@@ -201,7 +201,7 @@ export default function VideoShowcaseSection() {
     return (
         <section
             id="showcase"
-            className="relative isolate overflow-hidden bg-linear-to-b from-black via-[#140a38] via-50% to-[#3a1f94] py-16 lg:py-32 sm:py-24"
+            className="relative isolate overflow-hidden bg-linear-to-b from-black via-[#140a38] via-50% to-[#3a1f94] py-16 sm:py-24 lg:py-32"
         >
             <div
                 aria-hidden="true"
@@ -258,7 +258,7 @@ export default function VideoShowcaseSection() {
                             1 Year of Meta
                         </span>
                     </h2>
-                    <p className="mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/70 lg:text-xl sm:text-lg">
+                    <p className="mt-6 max-w-2xl text-base leading-relaxed text-pretty text-white/70 sm:text-lg lg:text-xl">
                         One year of building brands, growing businesses, and
                         making prosperity a reality. Thank you for being part of
                         the journey.
@@ -267,7 +267,7 @@ export default function VideoShowcaseSection() {
 
                 <div
                     className={cn(
-                        'relative mt-8 delay-150 lg:mt-16 sm:mt-12',
+                        'relative mt-8 delay-150 sm:mt-12 lg:mt-16',
                         revealStyles,
                         hiddenUntilInView,
                     )}

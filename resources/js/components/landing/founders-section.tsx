@@ -54,7 +54,7 @@ export default function FoundersSection() {
     return (
         <section
             id="founders"
-            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-16 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-8 sm:py-24"
+            className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-black py-16 sm:py-24 lg:h-dvh lg:min-h-0 lg:pt-24 lg:pb-8"
         >
             <div
                 aria-hidden="true"
@@ -84,14 +84,14 @@ export default function FoundersSection() {
                             Founders
                         </span>
                     </h2>
-                    <p className="mt-4 text-base leading-relaxed text-pretty text-white/70 lg:text-base sm:text-lg">
+                    <p className="mt-4 text-base leading-relaxed text-pretty text-white/70 sm:text-lg lg:text-base">
                         Meet the visionary leaders behind META Digitrading,
                         bringing decades of combined expertise in digital
                         trading, e-commerce, and business transformation.
                     </p>
                 </div>
 
-                <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-0 sm:mt-14">
+                <ul className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 lg:mt-8 lg:min-h-0 lg:flex-1 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-0">
                     {founders.map((founder, index) => (
                         <li
                             key={founder.name}
@@ -99,7 +99,7 @@ export default function FoundersSection() {
                                 transitionDelay: `${150 + index * 100}ms`,
                             }}
                             className={cn(
-                                'group relative rounded-2xl p-px lg:row-span-2 lg:grid lg:min-h-0 lg:grid-rows-subgrid sm:rounded-3xl',
+                                'group relative rounded-2xl p-px sm:rounded-3xl lg:row-span-2 lg:grid lg:min-h-0 lg:grid-rows-subgrid',
                                 revealStyles,
                                 hiddenUntilInView,
                             )}
@@ -113,8 +113,8 @@ export default function FoundersSection() {
                                 className="absolute inset-0 rounded-2xl bg-linear-to-br from-violet-500 via-indigo-500/60 to-cyan-300 opacity-0 shadow-[0_24px_60px_-20px_rgb(139_92_246/0.8)] transition-opacity duration-500 group-hover:opacity-100 sm:rounded-3xl"
                             />
 
-                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1rem-1px)] bg-[#07040f] lg:row-span-2 lg:grid lg:grid-rows-subgrid sm:rounded-[calc(1.5rem-1px)]">
-                                <div className="relative aspect-square overflow-hidden bg-linear-to-b sm:aspect-4/5 lg:aspect-auto lg:min-h-0 from-violet-500/80 via-indigo-950 via-55% to-[#07040f]">
+                            <article className="relative flex h-full flex-col overflow-hidden rounded-[calc(1rem-1px)] bg-[#07040f] sm:rounded-[calc(1.5rem-1px)] lg:row-span-2 lg:grid lg:grid-rows-subgrid">
+                                <div className="relative aspect-square overflow-hidden bg-linear-to-b from-violet-500/80 via-indigo-950 via-55% to-[#07040f] sm:aspect-4/5 lg:aspect-auto lg:min-h-0">
                                     <LandingImage
                                         src={founder.image}
                                         alt={`Portrait of ${founder.name}`}
