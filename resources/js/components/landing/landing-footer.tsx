@@ -2,7 +2,7 @@ import { Link } from '@inertiajs/react';
 
 import AppLogoIcon from '@/components/app-logo-icon';
 import { cn } from '@/lib/utils';
-import { about, home } from '@/routes';
+import { about, careers, home, services } from '@/routes';
 
 const footerLinkGroups = [
     {
@@ -10,7 +10,7 @@ const footerLinkGroups = [
         links: [
             { title: 'Home', href: home().url },
             { title: 'About Us', href: about().url },
-            { title: 'Careers', href: `${home().url}#careers` },
+            { title: 'Careers', href: careers().url },
             { title: 'FAQs', href: `${home().url}#faqs` },
             { title: 'Contact Us', href: `${home().url}#contact` },
         ],
@@ -18,9 +18,9 @@ const footerLinkGroups = [
     {
         title: 'Services',
         links: [
-            { title: 'Meta Digitrading', href: `${home().url}#services` },
-            { title: 'Meta Advertising', href: `${home().url}#services` },
-            { title: 'Meta Brands', href: `${home().url}#services` },
+            { title: 'Meta Digitrading', href: services().url },
+            { title: 'Meta Advertising', href: services().url },
+            { title: 'Meta Brands', href: services().url },
         ],
     },
 ];
@@ -41,7 +41,7 @@ export default function LandingFooter() {
             />
 
             <div className="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10 lg:pt-20">
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] sm:gap-12">
+                <div className="grid gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
                     <div className="max-w-sm">
                         <Link
                             href={home()}

@@ -11,13 +11,13 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { about, home, services } from '@/routes';
+import { about, careers, home, services } from '@/routes';
 
 const navigationItems = [
     { title: 'Home', href: home().url },
     { title: 'About Us', href: about().url },
     { title: 'Services', href: services().url },
-    { title: 'Careers', href: `${home().url}#careers` },
+    { title: 'Careers', href: careers().url },
     { title: 'FAQs', href: `${home().url}#faqs` },
     { title: 'Contact Us', href: `${home().url}#contact` },
 ];
@@ -66,7 +66,7 @@ export default function LandingNavigation() {
                             hasScrolled ? 'h-9' : 'h-10 lg:h-12',
                         )}
                     />
-                    <span className="hidden text-base font-semibold tracking-wide text-white uppercase sm:inline lg:text-xl sm:text-lg">
+                    <span className="hidden text-base font-semibold tracking-wide text-white uppercase sm:inline sm:text-lg lg:text-xl">
                         Meta Digitrading
                     </span>
                 </Link>

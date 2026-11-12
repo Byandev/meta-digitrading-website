@@ -17,3 +17,9 @@ test('services page returns a successful response', function () {
 
     $response->assertOk();
 });
+
+test('careers page returns a successful response', function () {
+    $response = $this->get(route('careers'));
+
+    $response->assertOk();
+});

@@ -1,12 +1,31 @@
+import type { ReactNode } from 'react';
+
 import { cn } from '@/lib/utils';
+
+type PageHeroSectionProps = {
+    id: string;
+    eyebrow: string;
+    title: string;
+    highlight: string;
+    children: ReactNode;
+};
 
 const entranceStyles =
     'animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700 motion-reduce:animate-none';
 
-export default function ServicesHeroSection() {
+/**
+ * Full-screen hero shared by the public inner pages (Services, Careers, ...).
+ */
+export default function PageHeroSection({
+    id,
+    eyebrow,
+    title,
+    highlight,
+    children,
+}: PageHeroSectionProps) {
     return (
         <section
-            id="what-we-do"
+            id={id}
             className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black"
         >
             <div
@@ -35,7 +54,7 @@ export default function ServicesHeroSection() {
                         )}
                     >
                         <span className="size-2 rounded-full bg-cyan-300" />
-                        Start Something Bigger
+                        {eyebrow}
                     </p>
                     <h1
                         className={cn(
@@ -45,10 +64,10 @@ export default function ServicesHeroSection() {
                         )}
                     >
                         <span className="bg-linear-to-r from-white to-violet-300 bg-clip-text text-transparent">
-                            What{' '}
+                            {title}{' '}
                         </span>
                         <span className="bg-linear-to-r from-violet-500 to-cyan-300 bg-clip-text text-transparent">
-                            We Do
+                            {highlight}
                         </span>
                     </h1>
 
@@ -59,26 +78,7 @@ export default function ServicesHeroSection() {
                             'delay-200',
                         )}
                     >
-                        <p>
-                            <span className="font-semibold text-violet-400">
-                                Meta Digitrading
-                            </span>{' '}
-                            is your{' '}
-                            <span className="font-semibold text-cyan-300">
-                                all-in-one e-commerce solutions provider
-                            </span>
-                            , empowering businesses to sell smarter, faster, and
-                            better in the digital age.
-                        </p>
-                        <p className="border-l-2 border-cyan-300/70 pl-6 text-white/90">
-                            We are dedicated to helping entrepreneurs, SMEs, and
-                            established brands build, scale, and sustain their
-                            online presence through reliable, transparent, and
-                            future-ready digital solutions. At Meta Digitrading,
-                            we don’t just create platforms — we create
-                            possibilities, driving growth and prosperity through
-                            innovation and trust.
-                        </p>
+                        {children}
                     </div>
                 </div>
             </div>
