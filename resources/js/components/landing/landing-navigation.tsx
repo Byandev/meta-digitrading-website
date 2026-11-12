@@ -11,12 +11,12 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { about, home } from '@/routes';
+import { about, home, services } from '@/routes';
 
 const navigationItems = [
     { title: 'Home', href: home().url },
     { title: 'About Us', href: about().url },
-    { title: 'Services', href: `${home().url}#services` },
+    { title: 'Services', href: services().url },
     { title: 'Careers', href: `${home().url}#careers` },
     { title: 'FAQs', href: `${home().url}#faqs` },
     { title: 'Contact Us', href: `${home().url}#contact` },

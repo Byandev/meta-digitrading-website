@@ -47,6 +47,15 @@
         ],
         "createdAt": "2026-10-19T01:36:52.914Z",
         "reason": "Claude: section reproduces the user's supplied Our Culture mock (violet-to-cyan heading and card frames), matching the brand palette across sibling landing sections"
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "resources/js/components/landing/services-hero-section.tsx"
+        ],
+        "createdAt": "2026-11-12T08:36:01.637Z",
+        "reason": "Claude decided: violet-to-cyan is the Meta Digitrading brand palette, shown in the user's supplied services mockup screenshot and used by the logo and every existing landing section"
       }
     ]
   }
