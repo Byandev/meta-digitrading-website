@@ -5,6 +5,7 @@ import type { KeyboardEvent, PointerEvent } from 'react';
 import LandingImage from '@/components/landing/landing-image';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
+import { contact } from '@/routes';
 
 type ProductSlide = {
     src: string;
@@ -321,7 +322,7 @@ export default function FeaturedProductSection() {
                         </div>
 
                         <a
-                            href="#contact"
+                            href={contact().url}
                             className={cn(
                                 'group mt-8 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110 sm:mt-10 sm:w-auto',
                                 focusRingStyles,

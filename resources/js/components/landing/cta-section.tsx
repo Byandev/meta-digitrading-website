@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
+import { contact } from '@/routes';
 
 const focusRingStyles =
     'focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black focus-visible:outline-none';
@@ -54,7 +55,7 @@ export default function CtaSection({
 
                 <div className="mt-8 flex flex-col justify-center gap-4 sm:mt-10 sm:flex-row">
                     <a
-                        href="#contact"
+                        href={contact().url}
                         className={cn(
                             'group inline-flex h-14 items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-9 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.9)] ring-1 ring-white/25 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/1)] hover:brightness-110',
                             focusRingStyles,

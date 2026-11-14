@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
-import { home } from '@/routes';
+import { contact } from '@/routes';
 
 type Position = {
     title: string;
@@ -120,7 +120,7 @@ export default function OpenPositionsSection() {
                                         </p>
                                     </div>
                                     <a
-                                        href={`${home().url}#contact`}
+                                        href={contact().url}
                                         className={cn(
                                             'inline-flex shrink-0 items-center self-start rounded-lg border-2 border-violet-400 bg-cyan-200 px-4 py-1.5 text-base font-semibold tracking-wide text-[#1a0b3d] uppercase shadow-[0_10px_24px_-8px_rgb(167_139_250/0.8)] transition hover:bg-white sm:self-auto',
                                             focusRingStyles,

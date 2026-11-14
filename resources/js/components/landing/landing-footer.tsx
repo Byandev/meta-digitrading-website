@@ -2,7 +2,7 @@ import { Link } from '@inertiajs/react';
 
 import AppLogoIcon from '@/components/app-logo-icon';
 import { cn } from '@/lib/utils';
-import { about, careers, home, services } from '@/routes';
+import { about, careers, contact, home, services } from '@/routes';
 
 const footerLinkGroups = [
     {
@@ -12,7 +12,7 @@ const footerLinkGroups = [
             { title: 'About Us', href: about().url },
             { title: 'Careers', href: careers().url },
             { title: 'FAQs', href: `${home().url}#faqs` },
-            { title: 'Contact Us', href: `${home().url}#contact` },
+            { title: 'Contact Us', href: contact().url },
         ],
     },
     {

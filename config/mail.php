@@ -115,4 +115,16 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Form Recipient
+    |--------------------------------------------------------------------------
+    |
+    | Messages submitted through the public contact form are delivered to
+    | this address.
+    |
+    */
+
+    'contact_address' => env('MAIL_CONTACT_ADDRESS', 'metadigitrading@gmail.com'),
+
 ];

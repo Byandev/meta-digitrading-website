@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 import { useInView } from '@/hooks/use-in-view';
-import { home } from '@/routes';
+import { contact } from '@/routes';
 import { cn } from '@/lib/utils';
 
 type Audience = {
@@ -19,10 +19,30 @@ type Audience = {
 };
 
 const audiences: Audience[] = [
-    { title: 'Startups', subtitle: '& Entrepreneurs', icon: TrendingUp },
-    { title: 'SMEs', subtitle: '& Retail Brands', icon: ShoppingBag },
-    { title: 'Brick-and-Mortar', subtitle: 'Stores Going Online', icon: Store },
-    { title: 'Influencers', subtitle: '& Online Sellers', icon: Smartphone },
+    {
+        title: 'Startups',
+        subtitle: '& Entrepreneurs',
+        icon: TrendingUp,
+        image: '/images/who-we-help/startups.png',
+    },
+    {
+        title: 'SMEs',
+        subtitle: '& Retail Brands',
+        icon: ShoppingBag,
+        image: '/images/who-we-help/smes.png',
+    },
+    {
+        title: 'Brick-and-Mortar',
+        subtitle: 'Stores Going Online',
+        icon: Store,
+        image: '/images/who-we-help/brick-and-mortar.png',
+    },
+    {
+        title: 'Influencers',
+        subtitle: '& Online Sellers',
+        icon: Smartphone,
+        image: '/images/who-we-help/influencers.png',
+    },
 ];
 
 const revealStyles =
@@ -70,12 +90,21 @@ export default function WhoWeHelpSection() {
                             )}
                         >
                             <article className="flex h-full flex-col items-center rounded-[calc(1.5rem-2px)] bg-linear-to-b from-[#05030d] via-[#0d0b26] to-[#3b5a6b] px-6 pt-12 pb-8 text-center">
-                                <div className="flex h-36 flex-col items-center justify-center">
+                                <div
+                                    className={cn(
+                                        'flex flex-col items-center justify-center',
+                                        audience.image ? 'h-56 w-full' : 'h-36',
+                                    )}
+                                >
                                     {audience.image ? (
                                         <img
                                             src={audience.image}
                                             alt=""
-                                            className="max-h-full w-auto object-contain transition duration-500 group-hover:-translate-y-1"
+                                            width={512}
+                                            height={512}
+                                            loading="lazy"
+                                            draggable={false}
+                                            className="size-full max-w-56 object-contain transition duration-500 group-hover:-translate-y-1 motion-reduce:group-hover:translate-y-0"
                                         />
                                     ) : (
                                         <audience.icon
@@ -86,7 +115,12 @@ export default function WhoWeHelpSection() {
                                     )}
                                 </div>
 
-                                <h3 className="mt-2 text-xl leading-tight font-bold tracking-tight">
+                                <h3
+                                    className={cn(
+                                        'mt-2 text-xl leading-tight font-bold tracking-tight',
+                                        audience.image && 'sr-only',
+                                    )}
+                                >
                                     <span className="block bg-linear-to-r from-cyan-200 to-violet-300 bg-clip-text text-transparent">
                                         {audience.title}
                                     </span>
@@ -96,7 +130,7 @@ export default function WhoWeHelpSection() {
                                 </h3>
 
                                 <a
-                                    href={`${home().url}#contact`}
+                                    href={contact().url}
                                     className="mt-8 inline-flex w-full max-w-60 items-center justify-center gap-2 rounded-xl border border-white/30 bg-linear-to-r from-indigo-700 via-violet-600 to-fuchsia-400 px-6 py-3 text-base font-semibold tracking-wide text-white uppercase transition hover:brightness-110 focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0b26] focus-visible:outline-none"
                                 >
                                     Learn More

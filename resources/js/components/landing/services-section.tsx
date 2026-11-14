@@ -4,6 +4,7 @@ import type { MouseEvent } from 'react';
 
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
+import { contact } from '@/routes';
 
 type Service = {
     title: string;
@@ -181,7 +182,7 @@ export default function ServicesSection() {
                                         {service.description}
                                     </p>
                                     <a
-                                        href="#contact"
+                                        href={contact().url}
                                         className="mt-8 inline-flex items-center gap-2 self-start rounded-full text-sm font-semibold tracking-wider text-violet-200 uppercase transition-colors hover:text-cyan-300 focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-4 focus-visible:ring-offset-[#07040f] focus-visible:outline-none"
                                     >
                                         Learn more

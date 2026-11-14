@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
+import { contact } from '@/routes';
 
 const focusRingStyles =
     'focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black focus-visible:outline-none';
@@ -14,6 +15,22 @@ export default function HeroSection() {
             id="home"
             className="relative isolate flex min-h-svh items-center overflow-hidden bg-black"
         >
+            <img
+                src="/images/home/team.jpg"
+                alt=""
+                aria-hidden="true"
+                fetchPriority="high"
+                draggable={false}
+                className="absolute inset-0 -z-10 size-full object-cover object-[50%_35%]"
+            />
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 bg-linear-to-b from-black/80 via-black/80 to-black/90 lg:bg-linear-to-r lg:from-black/95 lg:via-black/75 lg:to-black/45"
+            />
+            <div
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-linear-to-b from-transparent to-black"
+            />
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_60%_at_50%_-10%,rgb(124_58_237/0.85),rgb(49_46_129/0.6)_45%,transparent_75%)]"
@@ -21,14 +38,6 @@ export default function HeroSection() {
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] mask-[radial-gradient(ellipse_70%_60%_at_50%_40%,black,transparent)] bg-size-[64px_64px]"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute top-1/4 -right-48 -z-10 size-[40rem] rounded-full bg-[radial-gradient(circle,rgb(103_232_249/0.9)_0%,rgb(34_120_150/0.5)_35%,transparent_70%)] motion-safe:animate-pulse motion-safe:[animation-duration:8s]"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute top-1/2 -left-72 -z-10 size-[36rem] rounded-full bg-indigo-700/40 blur-3xl"
             />
 
             <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-28 sm:pt-36 lg:px-10 lg:pt-44">
@@ -76,7 +85,7 @@ export default function HeroSection() {
                     )}
                 >
                     <a
-                        href="#contact"
+                        href={contact().url}
                         className={cn(
                             'group inline-flex h-13 items-center justify-center gap-3 rounded-full bg-linear-to-r from-blue-700 via-indigo-600 to-fuchsia-500 px-8 text-base font-semibold tracking-wide text-white uppercase shadow-[0_0_40px_-8px_rgb(139_92_246/0.8)] ring-1 ring-white/20 transition hover:shadow-[0_0_56px_-6px_rgb(139_92_246/0.95)] hover:brightness-110',
                             focusRingStyles,
