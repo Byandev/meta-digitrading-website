@@ -31,31 +31,19 @@ const culturePrograms: CultureProgram[] = [
         title: 'Monthly Awarding',
         description:
             'A time to recognize achievements, celebrate milestones, and appreciate the people who continue to contribute to META’s growth. We celebrate not only results, but also the effort, progress, and growth behind them.',
-        photos: [
-            '/images/culture/monthly-awarding-1.jpg',
-            '/images/culture/monthly-awarding-2.jpg',
-            '/images/culture/monthly-awarding-3.jpg',
-        ],
+        photos: ['/images/culture/monthly-awarding-1.jpg'],
     },
     {
         title: 'Powerhour',
         description:
             'A collaborative learning and immersion experience for META Interns, Creative Editors, and Business Partners. It creates opportunities to learn, exchange ideas, collaborate, and gain meaningful exposure to the META environment.',
-        photos: [
-            '/images/culture/powerhour-1.jpg',
-            '/images/culture/powerhour-2.jpg',
-            '/images/culture/powerhour-3.jpg',
-        ],
+        photos: ['/images/culture/powerhour-1.jpg'],
     },
     {
         title: 'META Movement',
         description:
             'Our commitment to wellness through movement. From badminton games to other active sessions, META Movement keeps our people active, healthy, and connected.',
-        photos: [
-            '/images/culture/meta-movement-1.jpg',
-            '/images/culture/meta-movement-2.jpg',
-            '/images/culture/meta-movement-3.jpg',
-        ],
+        photos: ['/images/culture/meta-movement-1.jpg'],
     },
 ];
 
