@@ -1,3 +1,5 @@
+import { UserRound } from 'lucide-react';
+
 import LandingImage from '@/components/landing/landing-image';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
@@ -12,7 +14,7 @@ type Founder = {
 /**
  * Drop the founder portraits into public/images/founders/ using these file
  * names. Transparent PNG cut-outs sit best on the card's violet glow.
- * Missing files show a branded placeholder instead.
+ * Missing files show a user-icon placeholder instead.
  */
 const founders: Founder[] = [
     {
@@ -118,7 +120,8 @@ export default function FoundersSection() {
                                     <LandingImage
                                         src={founder.image}
                                         alt={`Portrait of ${founder.name}`}
-                                        showFileName
+                                        placeholderIcon={UserRound}
+                                        placeholderIconClassName="size-24 -translate-y-6 sm:size-28"
                                         className="size-full object-contain object-bottom transition duration-700 ease-out group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
                                     />
                                     <div

@@ -23,6 +23,7 @@ const services: Service[] = [
             'We empower exponential growth — helping businesses move from potential to performance through bold ideas and transformative digital solutions.',
         icon: TrendingUp,
         accent: 'from-violet-600/70 via-indigo-700/40',
+        image: '/images/services/digitrading.webp',
     },
     {
         title: 'Meta',
@@ -31,6 +32,7 @@ const services: Service[] = [
             'We create advertising that informs, captivates, and converts — transforming ideas into campaigns that drive exponential growth and lasting brand impact.',
         icon: Megaphone,
         accent: 'from-fuchsia-600/60 via-violet-700/40',
+        image: '/images/services/advertising.webp',
     },
     {
         title: 'Meta',
@@ -39,6 +41,7 @@ const services: Service[] = [
             'We build powerful, purpose-driven identities that elevate businesses in the digital space. From vision to voice, we help brands create emotional connections, lasting impressions, and exponential growth.',
         icon: Sparkles,
         accent: 'from-cyan-500/50 via-indigo-700/40',
+        image: '/images/services/brand.webp',
     },
 ];
 
@@ -137,6 +140,7 @@ export default function ServicesSection() {
                                         <img
                                             src={service.image}
                                             alt=""
+                                            loading="lazy"
                                             className="size-full object-cover transition duration-700 group-hover:scale-105"
                                         />
                                     ) : (

@@ -16,7 +16,7 @@ export default function HeroSection() {
             className="relative isolate flex min-h-svh items-center overflow-hidden bg-black"
         >
             <img
-                src="/images/home/team.jpg"
+                src="/images/team/team.webp"
                 alt=""
                 aria-hidden="true"
                 fetchPriority="high"
@@ -34,10 +34,6 @@ export default function HeroSection() {
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_60%_at_50%_-10%,rgb(124_58_237/0.85),rgb(49_46_129/0.6)_45%,transparent_75%)]"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] mask-[radial-gradient(ellipse_70%_60%_at_50%_40%,black,transparent)] bg-size-[64px_64px]"
             />
 
             <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-28 sm:pt-36 lg:px-10 lg:pt-44">

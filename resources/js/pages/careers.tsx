@@ -20,6 +20,7 @@ export default function Careers() {
                         eyebrow="Start Something Bigger"
                         title="Join"
                         highlight="Our Team"
+                        backgroundImage="/images/team/team.webp"
                     >
                         <p>
                             At{' '}

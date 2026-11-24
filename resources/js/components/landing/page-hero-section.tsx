@@ -8,6 +8,7 @@ type PageHeroSectionProps = {
     title: string;
     highlight: string;
     children: ReactNode;
+    backgroundImage?: string;
 };
 
 const entranceStyles =
@@ -22,27 +23,31 @@ export default function PageHeroSection({
     title,
     highlight,
     children,
+    backgroundImage,
 }: PageHeroSectionProps) {
     return (
         <section
             id={id}
             className="relative isolate flex min-h-dvh items-center overflow-hidden bg-black"
         >
+            {backgroundImage && (
+                <>
+                    <img
+                        src={backgroundImage}
+                        alt=""
+                        aria-hidden="true"
+                        draggable={false}
+                        className="absolute inset-0 -z-20 size-full object-cover"
+                    />
+                    <div
+                        aria-hidden="true"
+                        className="absolute inset-0 -z-10 bg-linear-to-r from-black via-black/85 to-black/50"
+                    />
+                </>
+            )}
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_90%_60%_at_50%_-10%,rgb(124_58_237/0.7),rgb(49_46_129/0.5)_45%,transparent_75%)]"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)] mask-[radial-gradient(ellipse_70%_60%_at_50%_30%,black,transparent)] bg-size-[64px_64px]"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute top-1/2 -right-40 -z-10 size-[28rem] -translate-y-1/3 rounded-full bg-[radial-gradient(circle,rgb(103_232_249/0.85),rgb(34_211_238/0.35)_35%,transparent_70%)] blur-2xl sm:size-[40rem] lg:right-0"
-            />
-            <div
-                aria-hidden="true"
-                className="absolute bottom-0 -left-48 -z-10 size-[28rem] rounded-full bg-indigo-600/30 blur-3xl"
             />
 
             <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-24 lg:px-10 lg:pt-32 lg:pb-24">

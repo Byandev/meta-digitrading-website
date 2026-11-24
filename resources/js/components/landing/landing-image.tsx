@@ -1,3 +1,4 @@
+import type { LucideIcon } from 'lucide-react';
 import { ImageIcon } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -8,6 +9,8 @@ type LandingImageProps = {
     alt: string;
     className?: string;
     showFileName?: boolean;
+    placeholderIcon?: LucideIcon;
+    placeholderIconClassName?: string;
 };
 
 /**
@@ -19,6 +22,8 @@ export default function LandingImage({
     alt,
     className,
     showFileName = false,
+    placeholderIcon: PlaceholderIcon = ImageIcon,
+    placeholderIconClassName,
 }: LandingImageProps) {
     const imageRef = useRef<HTMLImageElement>(null);
     const [hasFailed, setHasFailed] = useState(false);
@@ -41,9 +46,12 @@ export default function LandingImage({
                     className,
                 )}
             >
-                <ImageIcon
+                <PlaceholderIcon
                     aria-hidden="true"
-                    className={showFileName ? 'size-12' : 'size-6'}
+                    className={cn(
+                        showFileName ? 'size-12' : 'size-6',
+                        placeholderIconClassName,
+                    )}
                     strokeWidth={1.25}
                 />
                 {showFileName && (
