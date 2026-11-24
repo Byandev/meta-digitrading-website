@@ -51,10 +51,7 @@ function ShowcaseVideo() {
             return;
         }
 
-        if (
-            video.error ||
-            video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE
-        ) {
+        if (video.error) {
             setHasFailed(true);
         } else if (Number.isFinite(video.duration)) {
             setDuration(video.duration);
